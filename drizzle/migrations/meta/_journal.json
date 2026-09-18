@@ -22,6 +22,13 @@
       "when": 1789689794646,
       "tag": "0002_gemini_key_pool",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1789689806248,
+      "tag": "0003_voice_settings_and_gemini_image",
+      "breakpoints": true
     }
   ]
 }
