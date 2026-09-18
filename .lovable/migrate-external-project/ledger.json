@@ -1,0 +1,14 @@
+{
+  "source": "github:bestmarket/boost-buddy-magic",
+  "capabilities": [
+    { "capability": "application code (routes, components, server functions)", "source": "repository src/", "outcome": "migrated", "status": "verified", "next_action": "" },
+    { "capability": "database schema (15 tables, RLS, triggers, roles)", "source": "supabase + drizzle migrations", "outcome": "migrated", "status": "verified", "next_action": "" },
+    { "capability": "seed AI provider/settings rows", "source": "migrations", "outcome": "migrated", "status": "verified", "next_action": "" },
+    { "capability": "media storage bucket + per-user policies", "source": "storage policies migration", "outcome": "migrated (private bucket 'media')", "status": "verified", "next_action": "" },
+    { "capability": "email/password auth", "source": "auth.tsx", "outcome": "migrated", "status": "verified (signup + confirmation email)", "next_action": "" },
+    { "capability": "Google sign-in", "source": "auth.tsx via cloud-auth-js", "outcome": "migrated (managed Google provider enabled)", "status": "implemented", "next_action": "user completes a real Google sign-in" },
+    { "capability": "scheduled video publishing cron", "source": "api/public/hooks/scheduled-videos + cron_config", "outcome": "migrated; pg_cron job every 15 min with DB-stored token", "status": "implemented", "next_action": "goes live on the published URL after publish" },
+    { "capability": "existing user data/records", "source": "none in repository", "outcome": "pending", "status": "blocked", "next_action": "user exports CSV/JSON from the old app's database" },
+    { "capability": "third-party AI provider keys (Gemini pool, OpenAI, ElevenLabs, etc.)", "source": "stored in old DB, not in repo", "outcome": "pending", "status": "blocked", "next_action": "user re-adds keys in the app's admin page" }
+  ]
+}
